@@ -9,4 +9,4 @@ def splitList(g, s):
 	yield r
 
 with open("input", "r") as f:
-	print(max(map(lambda x: sum(map(int, x)),splitList(map(str.rstrip,f), ""))))
+	print(sum(sorted(map(lambda x: sum(map(int, x)),splitList(map(str.rstrip,f), "")), reverse=True)[:3]))
